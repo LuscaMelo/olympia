@@ -19,7 +19,7 @@ html {
 }
 
 .hero {
-    background-image: url('./images/olympia.png');
+    background-image: url('../images/olympia.png');
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
@@ -95,6 +95,32 @@ html {
     background-color: #8f0d0d;
 }
 
+.video-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container iframe {
+    width: 90%;
+    height: 70%;
+    max-width: 800px;
+    max-height: 420px;
+    z-index: 20;
+}
+
+.overlay {
+    background: #00000069;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     .form-container {
@@ -114,5 +140,9 @@ html {
 
     .hero {
         background-position-x: calc(-450px);
+    }
+
+    .video-container iframe {
+        height: 35%;
     }
 }
